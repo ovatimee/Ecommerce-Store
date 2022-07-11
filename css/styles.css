@@ -1,0 +1,538 @@
+:root {
+  --primary-color: #ff6b6b;
+  --secondary-color: #794afa;
+  --secondary-dark-color: #453c5c;
+
+  --white-color: #fff;
+  --light-bg-color: #f2f3f5;
+  --light-text-color: #7c899a;
+  --border-color: #e5e8ec;
+  --dark-color: #0a021c;
+
+  --font-small: 13px;
+  --font-smaller: 11px;
+
+  --percent100: 100%;
+  --percent50: 50%;
+
+  --fw3: 300;
+  --fw5: 500;
+  --fw6: 600;
+  --fw7: 700;
+  --fw8: 800;
+
+  --trans-background-color: background-color 0.3s, color 0.3s;
+  --trans-background: background-color 0.3s;
+  --trans-color: color 0.3s;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--dark-color);
+  background-color: var(--white-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: center;
+}
+
+strong {
+  font-weight: var(--fw8);
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input::placeholder {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins";
+}
+
+h1 {
+  font-size: calc(1.3em + 1vw);
+  font-weight: var(--fw8);
+  line-height: 1;
+}
+h2 {
+  font-size: 2.5em;
+}
+h3 {
+  font-size: 1.2em;
+  font-weight: var(--fw7);
+}
+h4 {
+  font-size: 1em;
+  font-weight: var(--fw6);
+}
+
+/* ---------------------
+  * Resuable Selectors 
+  *  ------------------*/
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 0.938em;
+}
+
+.column {
+  margin-left: -0.938em;
+  margin-right: -0.938em;
+}
+
+.column .row {
+  padding: 0 0.938em;
+}
+
+.flexwrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexcenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexitem {
+  display: flex;
+  align-items: center;
+}
+
+.flexcol {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.main-links li a:hover {
+  color: var(--secondary-color);
+}
+
+.second-links a:hover {
+  color: var(--light-text-color);
+}
+
+.icon-small,
+.icon-large {
+  display: flex;
+  align-items: center;
+  padding: 0 0.25em;
+  font-weight: normal;
+  display: inline-block;
+}
+
+.icon-small {
+  font-size: 1.2em;
+  margin: auto;
+}
+
+.icon-large {
+  font-size: 1.75em;
+  padding: 0 0.75em 0 0;
+}
+
+.mobile-hide {
+  display: none;
+}
+
+/* ---------------------
+  * Structure Styling
+
+  00. Resuable Selectors 
+
+  01. HEADER
+    a. Header Top
+    b. Header Nav
+    c. Header Main, Departments Category
+    d. Search Form
+    e. Responsive Menu - Off Canvas
+  
+  02. SLIDER
+  03. BRANDS
+  04. PRODUCT
+    a. Global Products
+    b. Big Products
+    c. Mini Products
+    d. Main Products
+
+  05. BANNER
+    a. News Letter 
+    b. Widgets
+    c. Footer Info
+  06. BOTTOM MENU
+    a. Seach
+
+  07. OVERLAY
+  08. PAGE SINGLE
+    a. Breadcrumb
+    b. Product details
+    c. Product description
+    d. Review
+    e. Product Review Form
+
+  09. PAGE SINGLE: SPECIAL OFFER
+  10. PAGE CATEGORY
+    a. Sidebar products filter
+    b. Products block
+
+  11. CART
+  12. PAGE CART
+  13. PAGE CHECKOUT
+  14. MODAL
+  15. RESPONSIVE
+  *  ------------------*/
+
+/* ---------------------
+  * 01. HEADER 
+  *  ------------------*/
+
+header li > a {
+  display: flex;
+  position: relative;
+  line-height: inherit;
+  transition: var(--trans-color);
+}
+
+/* 01. HEADER___________
+     b. Header Top
+  * ----------------*/
+
+.header-top .wrapper {
+  font-size: var(--font-small);
+  font-weight: var(--fw3);
+  justify-content: space-between;
+  line-height: 42px;
+}
+
+.header-top .wrapper ul {
+  gap: 2em;
+}
+
+.header-top li {
+  position: relative;
+}
+
+.header-top ul ul {
+  position: absolute;
+  left: -1em;
+  line-height: 2em;
+  background-color: var(--white-color);
+  border: 1px solid var(--border-color);
+  z-index: 1;
+  display: none;
+}
+
+.header-top .right ul ul li a {
+  padding: 0.25em 1em;
+}
+
+.header-top .right ul ul li.current a {
+  background-color: var(--border-color);
+}
+
+.header-top li:hover ul {
+  display: block;
+}
+
+/* 01. HEADER___________
+     b. Header Nav
+  * ----------------*/
+
+.header-nav {
+  padding: 0.5em 0;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.trigger {
+  font-size: 1.5em;
+  display: flex;
+  padding: 0.25em;
+  margin-right: 0.5em;
+}
+
+.logo a {
+  font-family: "Poppins";
+  font-size: 1.75em;
+  position: relative;
+  font-weight: var(--fw8);
+  display: flex;
+  padding-left: 0.75em;
+  margin-right: 2em;
+}
+
+.circle {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--percent50);
+  background-color: var(--light-bg-color);
+  z-index: -1;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--percent50);
+  background-color: var(--secondary-color);
+  bottom: 5px;
+  right: 5px;
+  opacity: 0.4;
+}
+
+.header-nav nav > ul {
+  line-height: 100px;
+  gap: 2em;
+}
+
+.fly-item {
+  position: absolute;
+  height: 16px;
+  font-size: var(--font-smaller);
+  padding: 3px;
+  text-align: center;
+  line-height: 10px;
+  color: var(--white-color);
+}
+
+nav .fly-item {
+  top: 50%;
+  margin-top: -24px;
+  width: 30px;
+  border-radius: 3px;
+  right: -32px;
+  background-color: var(--primary-color);
+}
+
+.header-nav .right {
+  margin-left: auto;
+  position: relative;
+}
+
+.header-nav .right .icon-large {
+  position: relative;
+}
+
+.header-nav .right .fly-item {
+  top: 0;
+  right: 16px;
+  width: 16px;
+  background-color: var(--secondary-dark-color);
+  border-radius: var(--percent50);
+}
+
+
+.mega .flexcol {
+  flex: 1;
+  min-width: 180px;
+  padding-right: 2.5em;
+  margin-bottom: 1.5em;
+  z-index: 1;
+}
+/* 01. HEADER___________
+     c. Header Main, Departments Category
+  * ----------------*/
+
+/* 01. HEADER___________
+     d. Search Form
+  * ----------------*/
+
+/* 01. HEADER___________
+     e. Responsive Menu
+  * ----------------*/
+
+/* ___________
+  02. SLIDER
+  * ----------*/
+
+/* ___________
+  03. BRANDS
+  * ----------*/
+
+/* ___________
+  04. PRODUCT BLOCK STYLE
+  * ----------*/
+
+/* 04. PRODUCTS___________
+    a. Global Products
+* ----------------*/
+
+/* 04. PRODUCTS___________
+    b. Big Products
+* ----------------*/
+
+/* 04. PRODUCTS___________
+    c. Mini Products
+* ----------------*/
+
+/* 04. PRODUCTS___________
+    d. Main Products
+* ----------------*/
+
+/* ___________
+  05. BANNER
+  * ----------*/
+
+/* 05. BANNER___________
+    a. News Letter 
+  * ----------------*/
+
+/* 05. BANNER___________
+    b. Widgets
+  * ----------------*/
+
+/* 05. BANNER___________
+    c. Footer Info
+  * ----------------*/
+
+/* ___________
+  06. BOTTOM MENU
+  * ----------*/
+
+/* 06. BOTTOM MENU___________
+    a. Seach
+  * ----------------*/
+
+/* ___________
+  07. OVERLAY
+  * ----------*/
+
+/* ___________
+  08. PAGE SINGLE
+  * ----------*/
+
+/* 08. PAGE SINGLE___________
+    a. Breadcrumb
+  * ----------------*/
+
+/* 08. PAGE SINGLE___________
+    b. Product details
+  * ----------------*/
+
+/* 08. PAGE SINGLE___________
+    c. Product description
+  * ----------------*/
+
+/* 08. PAGE SINGLE___________
+    d. Review
+  * ----------------*/
+
+/* 08. PAGE SINGLE___________
+    e. Product Review Form
+  * ----------------*/
+
+/* ___________
+  09. PAGE SINGLE: SPECIAL OFFER
+  * ----------*/
+
+/* ___________
+  10. PAGE CATEGORY
+  * ----------*/
+
+/* 10. PAGE CATEGORY___________
+    a. Sidebar products filter
+  * ----------------*/
+
+/* 10. PAGE CATEGORY___________
+    b. Products block
+  * ----------------*/
+
+/* ___________
+  11. CART
+  * ----------*/
+
+/* ___________
+  12. PAGE CART
+  * ----------*/
+
+/* ___________
+  13. PAGE CHECKOUT
+  * ----------*/
+
+/* ___________
+  14. MODAL
+  * ----------*/
+
+/* ___________
+  15. RESPONSIVE
+  * ----------*/
+
+@media screen and (min-width: 992px) {
+  .container {
+    padding: 0 2em;
+  }
+  .desktop-hide {
+    display: none;
+  }
+  .mobile-hide {
+    display: block;
+  }
+  .logo a {
+    margin-right: 2em;
+  }
+  .header-nav {
+    padding: 0;
+    margin: 0;
+    border-bottom: 0;
+  }
+  .header-nav .right li > a {
+    margin-left: 1em;
+  }
+/* 
+  mega menu */
+  nav .mega {
+    position: absolute;
+    width: var(--percent100);
+    height: auto;
+    top: auto;
+    left: 0;
+    right: 0;
+    padding: 2.5em;
+    line-height: 2em;
+    background-color: var(--light-bg-color);
+    box-shadow: rgb(0 0 0 / 20%) 0 30px 20px -30px;
+    z-index: 100;
+  }
+  nav .mega .wrapper {
+    display: flex;
+  }
+}
