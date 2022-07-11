@@ -498,10 +498,10 @@ form.search input {
   font-weight: var(--fw3);
 }
 
-form.search :where(span,button){
+form.search :where(span, button) {
   position: absolute;
   top: 0;
-  padding: .55em 1.5em;
+  padding: 0.55em 1.5em;
   font-size: 1em;
   color: var(--light-text-color);
   height: var(--percent100);
@@ -511,7 +511,7 @@ form.search button {
   right: 0;
   border: 0;
   outline: 0;
-  font-weight: .875em;
+  font-weight: 0.875em;
   font-weight: var(--fw6);
   background-color: var(--primary-color);
   color: var(--white-color);
@@ -754,5 +754,65 @@ form.search button:hover {
     font-weight: var(--fw5);
     padding: 0 1.5em;
     border-bottom: 1px solid var(--border-color);
+  }
+  .dpt-menu .has-child > ul,
+  .dpt-menu .mega {
+    position: absolute;
+    top: 0;
+    left: var(--percent100);
+    width: var(--percent100);
+    height: auto;
+    min-height: var(--percent100);
+    padding: 1.5em;
+    font-size: var(--font-small);
+    line-height: 2.5em;
+    border: 1px solid var(--border-color);
+    border-top: 0;
+
+    display: none;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+  /* 
+  Showing the first sub menu */
+  .dpt-menu .mega {
+    display: block;
+  }
+  .dpt-menu .beauty ul {
+    background-image: url(../assets/close-up-photography-of-a-woman-eating-orange-2.jpeg);
+    background-size: 100% 100%;
+  }
+  .dpt-menu .electric ul {
+    background-image: url(../assets/sincerely-media-zw8t5aMmJQQ-unsplash.jpeg);
+    background-size: 100% 100%;
+  }
+  .dpt-menu .fashion ul {
+    background-image: url(../assets/images-1.jpg);
+    background-size: 100% 100%;
+  }
+  .dpt-menu .homekit .mega {
+    background-image: url(../assets/sincerely-media-zw8t5aMmJQQ-unsplash.jpeg);
+    background-size: 100% 100%;
+  }
+
+  .dpt-menu .has-child > :where(ul, .mega)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0% rgba(255, 255, 255, 0.1)
+    );
+  }
+  .dpt-menu .mega {
+    width: auto;
+    min-width: var(--percent100);
+  }
+  .dpt-menu .has-child:hover .mega {
+    display: flex;
   }
 }
