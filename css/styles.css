@@ -476,6 +476,14 @@ nav .fly-item {
   align-items: center;
 }
 
+.dpt-menu .has-child:hover ul{
+  display: block;
+}
+
+.dpt-menu .has-child li a:hover { 
+  text-decoration: underline;
+}
+
 /* 01. HEADER___________
      d. Search Form
   * ----------------*/
@@ -776,9 +784,9 @@ form.search button:hover {
   }
   /* 
   Showing the first sub menu */
-  .dpt-menu .mega {
+  /* .dpt-menu .mega {
     display: block;
-  }
+  } */
   .dpt-menu .beauty ul {
     background-image: url(../assets/close-up-photography-of-a-woman-eating-orange-2.jpeg);
     background-size: 100% 100%;
@@ -792,7 +800,7 @@ form.search button:hover {
     background-size: 100% 100%;
   }
   .dpt-menu .homekit .mega {
-    background-image: url(../assets/sincerely-media-zw8t5aMmJQQ-unsplash.jpeg);
+    background-image: url(../assets/nio-life-hero-desktop.jpeg);
     background-size: 100% 100%;
   }
 
@@ -805,7 +813,7 @@ form.search button:hover {
     bottom: 0;
     background: linear-gradient(
       90deg,
-      rgba(255, 255, 255, 1) 0% rgba(255, 255, 255, 0.1)
+      rgba(255, 255, 255, 1) 0% rgba(255, 255, 255, .1)
     );
   }
   .dpt-menu .mega {
