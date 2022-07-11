@@ -476,11 +476,11 @@ nav .fly-item {
   align-items: center;
 }
 
-.dpt-menu .has-child:hover ul{
+.dpt-menu .has-child:hover ul {
   display: block;
 }
 
-.dpt-menu .has-child li a:hover { 
+.dpt-menu .has-child li a:hover {
   text-decoration: underline;
 }
 
@@ -532,6 +532,55 @@ form.search button:hover {
 /* 01. HEADER___________
      e. Responsive Menu
   * ----------------*/
+.site-off {
+  position: fixed;
+  width: 320px;
+  height: var(--percent100);
+  background-color: var(--white-color);
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.off-canvas {
+  width: var(--percent100);
+  height: var(--percent100);
+  touch-action: auto;
+  padding: 1.5em;
+}
+
+.off-canvas .canvas-head {
+  color: var(--white-color);
+  justify-content: space-between;
+  padding: 1.5em;
+  margin: -1.5em -1.5em 1.5em;
+  background-color: var(--secondary-dark-color);
+  border-bottom-right-radius: 160px 25px;
+}
+
+.off-canvas .canvas-head .logo {
+  z-index: 10;
+  position: relative;
+}
+
+.off-canvas .canvas-head .logo .circle {
+  opacity: 0.75;
+}
+
+.t-close {
+  font-size: 1.25em;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--percent50);
+  background-color: var(--secondary-dark-color);
+  color: var(--trans-background-color);
+  transistion: var(--trans-background-color);
+}
+.t-close:hover {
+  background-color: var(--white-color);
+  color: var(--secondary-dark-color);
+}
+
+
 
 /* ___________
   02. SLIDER
@@ -813,7 +862,7 @@ form.search button:hover {
     bottom: 0;
     background: linear-gradient(
       90deg,
-      rgba(255, 255, 255, 1) 0% rgba(255, 255, 255, .1)
+      rgba(255, 255, 255, 1) 0% rgba(255, 255, 255, 0.1)
     );
   }
   .dpt-menu .mega {

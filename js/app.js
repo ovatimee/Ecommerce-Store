@@ -1,0 +1,17 @@
+// copy menu for mobile
+
+const copyMenu = () => {
+  const dptCategory = document.querySelector(".dpt-cat");
+  const dptPlace = document.querySelector(".departments");
+  dptPlace.innerHTML = dptCategory.innerHTML;
+
+  const mainNav = document.querySelector(".header-nav nav");
+  const navPlace = document.querySelector(".off-canvas nav");
+  navPlace.innerHTML = mainNav.innerHTML;
+
+  const topNav = document.querySelector(".header-top");
+  const topPlace = document.querySelector(".off-canvas .thetop-nav");
+  topPlace.innerHTML = topNav.innerHTML;
+};
+
+copyMenu();
