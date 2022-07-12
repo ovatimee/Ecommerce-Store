@@ -13,17 +13,20 @@ const copyMenu = () => {
   const topPlace = document.querySelector(".off-canvas .thetop-nav");
   topPlace.innerHTML = topNav.innerHTML;
 };
+copyMenu();
 
+const submenu = document.querySelectorAll(".has-child .icon-small");
+
+// const toggle = (e) => {
+//     e.preventDefault();
+//     submenu.forEach(item => item != this? item.closest('.has-child').classList.remove('.expand') : null);
+//     if(this.closest('.has-child').classList != 'expand')
+//     this.closest('.has-child').classList.toggle('expand')
+// }
 
 const toggle = (e) => {
     e.preventDefault();
-    submenu.forEach(item => item != this? item.closest('.has-child').classList.remove('.expand') : null);
+    submenu.forEach(item => console.log(this))
 }
 
-const submenu = document.querySelectorAll(".has-child .icon-small");
 submenu.forEach((menu) => menu.addEventListener("click", toggle));
-
-
-
-
-copyMenu();
