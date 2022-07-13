@@ -922,7 +922,7 @@ form.search button:hover {
   height: 20px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z' fill='rgba(241,196,14,1)'/%3E%3C/svg%3E");
   background-position-y: top;
-  background-repeat: no-repeat;
+  background-repeat: space;
 }
 
 .products h3 {
@@ -931,12 +931,59 @@ form.search button:hover {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 
 .products h3 a:hover {
   text-decoration: underline;
 }
+
+
+.products .price .current {
+  font-size: calc(1em + 1vw);
+  color: var(--primary-color);
+  margin-right: 0.25em
+}
+
+.products .price .normal {
+  text-decoration: line-through;
+  color: var(--light-text-color);
+  text-decoration-color: var(--primary-color);
+  text-decoration-thickness: 1.5px;
+}
+
+
+.products .stock .qty {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.products .stock .bar {
+  height: 3px;
+  margin-top: 1em;
+  background-color: var(--border-color);
+  overflow: hidden;
+}
+
+.products .stock .available {
+  height: 3px;
+  width: 21px;
+  background-color: var(--secondary-color);
+}
+
+
+.products .item {
+  display: flex;
+  position: relative;
+}
+
+.products .stock-danger {
+  color: var(--primary-color);
+}
+
+
 
 /* 04. PRODUCTS___________
     b. Big Products
@@ -951,13 +998,30 @@ form.search button:hover {
   margin: 0 auto;
 }
 
-.products .price .current {
-  
-}
 
 /* 04. PRODUCTS___________
     c. Mini Products
 * ----------------*/
+
+
+.products.mini .item {
+  margin-top: 2em;
+}
+
+.products.mini .media {
+  width: 130px;
+  height: 160px;
+  margin-right: 1.25em;
+}
+
+.products.mini .cotent {
+  margin: 0;
+  gap: 0.75em;
+}
+
+.products:where(.mini, .main) h3 {
+  font-weight: 400;
+}
 
 /* 04. PRODUCTS___________
     d. Main Products
@@ -1050,6 +1114,12 @@ form.search button:hover {
 /* ___________
   15. RESPONSIVE
   * ----------*/
+
+  @media screen and (max-width: 768px) {
+    .products .price .current {
+      font-size: 1.25em;
+    }
+  }
 
 @media screen and (min-width: 992px) {
   .container {
