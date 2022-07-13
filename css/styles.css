@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Rubik:wght@300;400;500;600;700;800&display=swap");
+
 :root {
   --primary-color: #ff6b6b;
   --secondary-color: #794afa;
@@ -143,8 +145,16 @@ h4 {
   color: var(--secondary-color);
 }
 
+.main-links span {
+  padding-top: 0.2em;
+}
+
 .second-links a:hover {
   color: var(--light-text-color);
+}
+
+.second-links span {
+  padding-top: 0.12em;
 }
 
 .icon-small,
@@ -539,6 +549,17 @@ form.search button:hover {
   background-color: var(--white-color);
   overflow-y: auto;
   z-index: 1000;
+
+  transform: translateX(-100%);
+  visibility: hidden;
+  transition: transform .4s visibility .4s;
+  will-change: transform, visibility;
+}
+
+.showmenu .site-off {
+  transform: translateX(0);
+  visibility: visible;
+  transform: transform .4s 0s visibility 0s 0s;
 }
 
 .off-canvas {
@@ -575,10 +596,11 @@ form.search button:hover {
   color: var(--trans-background-color);
   transition: var(--trans-background-color);
 }
+
 .t-close:hover {
   background-color: var(--white-color);
   color: var(--secondary-dark-color);
-  opacity: .75;
+  opacity: 0.75;
 }
 
 .off-canvas .dpt-head {
@@ -596,14 +618,18 @@ form.search button:hover {
   line-height: 28px;
   padding-left: 3em;
 
-
   height: auto;
   max-height: 0;
   overflow: hidden;
-  transition: max-height .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+  transition: max-height 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.off-canvas .thetop-nav ul, .off-canvas nav > ul {
+.off-canvas .expand > :where(ul, .mega) {
+  max-height: 2000px;
+}
+
+.off-canvas .thetop-nav ul,
+.off-canvas nav > ul {
   flex-direction: column;
   align-items: flex-start;
   font-size: var(--font-small);
@@ -622,19 +648,28 @@ form.search button:hover {
 }
 
 .off-canvas .has-child .icon-small {
-  padding: .5em;
+  padding: 0.5em;
   line-height: initial;
 }
 
-.off-canvas .dpt-menu .icon-small svg {
-  transform: rotate(90deg)
+.off-canvas .dpt-menu .icon-small :where(svg, span) {
+  transform: rotate(90deg);
 }
 
-.off-canvas .has-child  {
+.off-canvas .expand .icon-small svg {
+  transform: rotate(0deg);
+}
+
+.off-canvas .has-child {
   width: var(--percent100);
 }
 
-.off-canvas .thetop-nav .right > ul > :where(:nth-child(4), li:nth-child(5)) > a {
+.off-canvas
+  .thetop-nav
+  .right
+  > ul
+  > :where(:nth-child(4), li:nth-child(5))
+  > a {
   display: none;
 }
 
@@ -644,19 +679,89 @@ form.search button:hover {
 }
 
 .off-canvas .thetop-nav .right ul ul li a {
-  padding: .5em;
+  padding: 0.5em;
   border: 1px solid var(--border-color);
   line-height: 16px;
-  margin: 0 .5em .5em 0;
+  margin: 0 0.5em 0.5em 0;
 }
 /* ___________
   02. SLIDER
   * ----------*/
 
+  .slider .item {
+    position: relative;
+    height: 474px;
+  }
+
+  .slider .item::before {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 450px;
+    height: 300px;
+    background-color: var(--white-color);
+    z-index: 1;
+    filter: blur(50px);
+    opacity: .8;
+  } 
+
+  .slider .text-content {
+    position: relative;
+    height: var(--percent100);
+    justify-content: flex-end;
+    padding: 0 0 10% 10%;
+    z-index: 1;
+  }
+
+  .slider h4 {
+    font-size: var(--font-small);
+    font-weight: var(--fw7);
+    width: fit-content;
+    padding: 4px 4.6px;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    border-radius: 4px;
+  }
+
+
+  .text-content :where(h2, h3) span:first-child {
+    font-weight: var(--fw3);
+    columns: var(--light-text-color);
+  }
+
+  .text-content :where(h2, h3) span:last-child {
+    color: var(--secondary-dark-color);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+  }
+
+
+  .swiper .swiper-pagination-bullet-active {
+    background-color: var(--secondary-dark-color);
+  }
+
 /* ___________
   03. BRANDS
   * ----------*/
 
+.brands .wrapper {
+  justify-content: space-around;
+  padding: 2em 0;
+}
+
+.brands .item {
+  width: 120px;
+}
+
+.brands .item img {
+  opacity: .25;
+  transition: opacity 0.3s;  
+}
+
+.brands .item img:hover {
+  opacity: 1;
+}
 /* ___________
   04. PRODUCT BLOCK STYLE
   * ----------*/
@@ -904,12 +1009,13 @@ form.search button:hover {
     display: block;
   } */
   .dpt-menu .beauty ul {
-    background-image: url(../assets/close-up-photography-of-a-woman-eating-orange-2.jpeg);
-    background-size: 100% 100%;
+    background-image: url(../assets/natural-face-tutorial.jpg);
+    background-size: cover;
+
   }
   .dpt-menu .electric ul {
-    background-image: url(../assets/sincerely-media-zw8t5aMmJQQ-unsplash.jpeg);
-    background-size: 100% 100%;
+    background-image: url(../assets/peripherals_laptop_latitude_3320_gallery_1.png);
+    background-size: contain;
   }
   .dpt-menu .fashion ul {
     background-image: url(../assets/images-1.jpg);
@@ -938,5 +1044,9 @@ form.search button:hover {
   }
   .dpt-menu .has-child:hover .mega {
     display: flex;
+  }
+  .slider > div > .wrapper {
+    width: calc(100% - (300px + 2em));
+    margin-left: auto;
   }
 }

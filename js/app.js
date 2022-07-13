@@ -15,18 +15,40 @@ const copyMenu = () => {
 };
 copyMenu();
 
+const menuBtn = document.querySelector(".trigger"),
+  closeBtn = document.querySelector(".t-close"),
+  addClass = document.querySelector(".site");
+menuBtn.addEventListener("click", () => {
+  addClass.classList.toggle("showmenu");
+});
+
+closeBtn.addEventListener("click", () => {
+  addClass.classList.remove("showmenu");
+});
+
 const submenu = document.querySelectorAll(".has-child .icon-small");
-
-// const toggle = (e) => {
-//     e.preventDefault();
-//     submenu.forEach(item => item != this? item.closest('.has-child').classList.remove('.expand') : null);
-//     if(this.closest('.has-child').classList != 'expand')
-//     this.closest('.has-child').classList.toggle('expand')
-// }
-
-const toggle = (e) => {
-    e.preventDefault();
-    submenu.forEach(item => console.log(this))
+function toggle(e) {
+  e.preventDefault();
+  submenu.forEach((item) =>
+    item != this ? item.closest(".has-child").classList.remove(".expand") : null
+  );
+  if (this.closest(".has-child").classList != "expand")
+    this.closest(".has-child").classList.toggle("expand");
 }
 
 submenu.forEach((menu) => menu.addEventListener("click", toggle));
+
+// slider
+
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  autoplay: {
+    delay: 5000,
+  },
+});
