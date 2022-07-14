@@ -552,14 +552,14 @@ form.search button:hover {
 
   transform: translateX(-100%);
   visibility: hidden;
-  transition: transform .4s visibility .4s;
+  transition: transform 0.4s visibility 0.4s;
   will-change: transform, visibility;
 }
 
 .showmenu .site-off {
   transform: translateX(0);
   visibility: visible;
-  transform: transform .4s 0s visibility 0s 0s;
+  transform: transform 0.4s 0s visibility 0s 0s;
 }
 
 .off-canvas {
@@ -688,58 +688,56 @@ form.search button:hover {
   02. SLIDER
   * ----------*/
 
-  .slider .item {
-    position: relative;
-    height: 474px;
-  }
+.slider .item {
+  position: relative;
+  height: 474px;
+}
 
-  .slider .item::before {
-    content: '';
-    position: absolute;
-    top: 30%;
-    left: 0;
-    width: 450px;
-    height: 300px;
-    background-color: var(--white-color);
-    z-index: 1;
-    filter: blur(50px);
-    opacity: .8;
-  } 
+.slider .item::before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 450px;
+  height: 300px;
+  background-color: var(--white-color);
+  z-index: 1;
+  filter: blur(50px);
+  opacity: 0.8;
+}
 
-  .slider .text-content {
-    position: relative;
-    height: var(--percent100);
-    justify-content: flex-end;
-    padding: 0 0 10% 10%;
-    z-index: 1;
-  }
+.slider .text-content {
+  position: relative;
+  height: var(--percent100);
+  justify-content: flex-end;
+  padding: 0 0 10% 10%;
+  z-index: 1;
+}
 
-  .slider h4 {
-    font-size: var(--font-small);
-    font-weight: var(--fw7);
-    width: fit-content;
-    padding: 4px 4.6px;
-    background-color: var(--dark-color);
-    color: var(--white-color);
-    border-radius: 4px;
-  }
+.slider h4 {
+  font-size: var(--font-small);
+  font-weight: var(--fw7);
+  width: fit-content;
+  padding: 4px 4.6px;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  border-radius: 4px;
+}
 
+.text-content :where(h2, h3) span:first-child {
+  font-weight: var(--fw3);
+  color: var(--light-text-color);
+}
 
-  .text-content :where(h2, h3) span:first-child {
-    font-weight: var(--fw3);
-    columns: var(--light-text-color);
-  }
+.text-content :where(h2, h3) span:last-child {
+  color: var(--secondary-dark-color);
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
 
-  .text-content :where(h2, h3) span:last-child {
-    color: var(--secondary-dark-color);
-    text-transform: uppercase;
-    letter-spacing: -1px;
-  }
-
-
-  .swiper .swiper-pagination-bullet-active {
-    background-color: var(--secondary-dark-color);
-  }
+.swiper .swiper-pagination-bullet-active {
+  background-color: var(--secondary-dark-color);
+}
 
 /* ___________
   03. BRANDS
@@ -755,8 +753,8 @@ form.search button:hover {
 }
 
 .brands .item img {
-  opacity: .25;
-  transition: opacity 0.3s;  
+  opacity: 0.25;
+  transition: opacity 0.3s;
 }
 
 .brands .item img:hover {
@@ -766,22 +764,22 @@ form.search button:hover {
   04. PRODUCT BLOCK STYLE
   * ----------*/
 
-  .sectop {
-    justify-content: space-between;
-    padding-bottom: 0.5em;
-    border-bottom: 1px solid var(--border-color);
-    margin: 2em;
-  }
+.sectop {
+  justify-content: space-between;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid var(--border-color);
+  margin: 2em;
+}
 
-  .sectop h2 {
-    position: relative;
-    font-size: 1.5em;
-    font-weight: var(--fw7);
-  }
+.sectop h2 {
+  position: relative;
+  font-size: 1.5em;
+  font-weight: var(--fw7);
+}
 
-  .sectop h2 span:not(.circle ){
-    padding: 0 0 0 2em;
-  }
+.sectop h2 span:not(.circle) {
+  padding: 0 0 0 2em;
+}
 
 .sectop h2 .circle {
   top: -5px;
@@ -793,7 +791,7 @@ form.search button:hover {
 
 .products .offer {
   text-align: center;
-  margin-bottom: 1.5em;  
+  margin-bottom: 1.5em;
 }
 
 .products .offer p {
@@ -823,7 +821,7 @@ form.search button:hover {
 }
 
 .products :where(.image, .thumbnail) img {
-  transition: transform .3s;
+  transition: transform 0.3s;
 }
 
 .products :where(.image, .thumbnail):hover img {
@@ -867,7 +865,7 @@ form.search button:hover {
 .products .hoverable li:not(.active) {
   transform: translateX(100%);
   opacity: 0;
-  transition: transform .3s, opacity .3s;
+  transition: transform 0.3s, opacity 0.3s;
 }
 
 .products .item:hover .hoverable li {
@@ -899,17 +897,15 @@ form.search button:hover {
   color: var(--white-color);
 }
 
-
 .products .content {
   display: flex;
   flex-direction: column;
 }
 
 .products:where(.big, .main, .one) .content {
-  gap: 1em; 
+  gap: 1em;
   margin-top: 1.25em;
 }
-
 
 .products .rating {
   display: flex;
@@ -930,7 +926,7 @@ form.search button:hover {
 }
 
 .products h3 {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-size: 1em;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -943,11 +939,10 @@ form.search button:hover {
   text-decoration: underline;
 }
 
-
 .products .price .current {
   font-size: calc(1em + 1vw);
   color: var(--primary-color);
-  margin-right: 0.25em
+  margin-right: 0.25em;
 }
 
 .products .price .normal {
@@ -957,12 +952,10 @@ form.search button:hover {
   text-decoration-thickness: 1.5px;
 }
 
-
 .products .stock .qty {
   display: flex;
   justify-content: space-between;
 }
-
 
 .products .stock .bar {
   height: 3px;
@@ -976,7 +969,6 @@ form.search button:hover {
   width: 21px;
   background-color: var(--secondary-color);
 }
-
 
 .products .item {
   display: flex;
@@ -993,7 +985,6 @@ form.search button:hover {
   margin-bottom: 2em;
 }
 
-
 /* 04. PRODUCTS___________
     b. Big Products
 * ----------------*/
@@ -1007,11 +998,9 @@ form.search button:hover {
   margin: 0 auto;
 }
 
-
 /* 04. PRODUCTS___________
     c. Mini Products
 * ----------------*/
-
 
 .products.mini .item {
   margin-top: 2em;
@@ -1054,11 +1043,15 @@ form.search button:hover {
   padding: 0 1em 1em;
   border-radius: 7px;
   z-index: 1;
-  background: linear-gradient(0deg, var(--light-bg-color) 0%, var(--white-color) 70%);
+  background: linear-gradient(
+    0deg,
+    var(--light-bg-color) 0%,
+    var(--white-color) 70%
+  );
   opacity: 0;
   visibility: hidden;
   will-change: opacity;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .products.main .item:hover .footer {
@@ -1074,21 +1067,110 @@ form.search button:hover {
   margin-top: 145px;
 }
 
-.products.main .item:hover .content > *:not(.footer){
+.products.main .item:hover .content > *:not(.footer) {
   z-index: 3;
 }
 
 /* ___________
   05. BANNER
   * ----------*/
+.banners .item {
+  position: relative;
+  background-color: var(--white-color);
+  border: 1px solid var(--border-color);
+}
 
-/* 05. BANNER___________
+/* .banner .image img {
+  width: 200px;
+} */
+
+.banner .image {
+  text-align: right;
+}
+
+.banner .get-grey {
+  background-color: var(--border-color);
+}
+
+.banner :where(.text-content, .over-link){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--percent100);
+  height: var(--percent100);
+}
+
+.banner .text-content {
+  padding: 1.5em 2.5em;
+}
+
+.banner h3 {
+  font-size: calc(1em + 0.5vw);
+  font-weight: var(--fw3);
+}
+
+.banner h3 span {
+  font-size: 80%;
+}
+
+.banners .product-categories .item {
+  display: flex;
+  padding: 1.5em;
+}
+
+.banners .product-categories .item .image {
+  max-width: 150px;
+}
+
+.mini-links ul {
+  font-size: var(--font-small);
+  color: var(--light-text-color);
+  margin-top: 1em;
+}
+
+.banners .second-links {
+  margin-top: 2em;
+}
+
+.mini-links li a:hover {
+  text-decoration: underline;
+}
+/* 05. FOOTER
     a. News Letter 
   * ----------------*/
 
-/* 05. BANNER___________
+  .newsletter {
+    padding: 2.5em 0;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+  }
+
+  .newsletter h3 {
+    font-size: 1.5em;
+  }
+  
+  .newsletter p {
+    font-weight: var(--fw3);
+    color: var(--border-color);
+    margin: 0.5em 0 1.5em;
+  }
+p strong {
+  color: var(--primary-color);
+}
+
+.newsletter form {
+  max-width: 500px;
+  width: var(--percent100);
+}
+/* 05. FOOTER___________
     b. Widgets
   * ----------------*/
+
+  .wigdets {
+    padding: 3.5em 2.5em;
+    background-color: var(--light-bg-color);
+  }
+
 
 /* 05. BANNER___________
     c. Footer Info
@@ -1166,24 +1248,25 @@ form.search button:hover {
   15. RESPONSIVE
   * ----------*/
 
-  @media screen and (min-width: 481px) {
-    .products.main .item {
-      flex: 0 0 50%;
-    }
+@media screen and (min-width: 481px) {
+  .products.main .item {
+    flex: 0 0 50%;
   }
+}
 
-
-  @media screen and (min-width: 768px) {
-    .products .price .current {
-      font-size: 1.25em;
-    }
-    .products.mini {
-      flex: 0 0 50%;
-    }
-    .products.main .item {
-      flex: 0 0 33.3333%;
-    }
+@media screen and (min-width: 768px) {
+  .products .price .current {
+    font-size: 1.25em;
   }
+  .products.mini,
+  .banner .row,
+  .wigdets .row {
+    flex: 0 0 50%;
+  }
+  .products.main .item {
+    flex: 0 0 33.3333%;
+  }
+}
 
 @media screen and (min-width: 992px) {
   .container {
@@ -1326,7 +1409,6 @@ form.search button:hover {
   .dpt-menu .beauty ul {
     background-image: url(../assets/natural-face-tutorial.jpg);
     background-size: cover;
-
   }
   .dpt-menu .electric ul {
     background-image: url(../assets/peripherals_laptop_latitude_3320_gallery_1.png);
@@ -1369,14 +1451,20 @@ form.search button:hover {
   }
 
   /* products */
-
-  .trending .products {
-    flex: 0 0 33.3333%
+  .trending .products,
+  .product-categories .row {
+    flex: 0 0 33.3333%;
   }
   .products.big .media {
     max-height: 373px;
   }
-  .products.main .item {
+  .products.main .item,
+  .wigdets .row {
     flex: 0 0 25%;
+  }
+  .newsletter .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
