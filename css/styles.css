@@ -1172,21 +1172,142 @@ p strong {
   }
 
 
-/* 05. BANNER___________
+/* 05. FOOTER___________
     c. Footer Info
   * ----------------*/
 
+  .footer-info {
+    padding: 3.5em 0.5em
+  }
+
+  .footer-info .wrapper .flexcol {
+    align-items: center;
+    gap: 0;
+  }
+
+  .footer-info ul li a {
+    font-size: 1.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--light-bg-color);
+    border-radius: var(--percent50);
+    margin: 0.25em;
+    transition: var(--trans-background);
+  }
+  .footer-info ul li a:hover {
+    background-color: var(--border-color);
+  }
+
+  .footer-info .logo a {
+    margin: 0 0 1em -0.75em;
+  }
+
+  .footer-info .mini-text {
+    margin-top: 2em;
+    text-align: center;
+  }
 /* ___________
   06. BOTTOM MENU
   * ----------*/
 
+.menu-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 60px;
+  background-color: var(--white-color);
+  box-shadow: 0 -2px 10px rgb(0, 0, 0 / 10%);
+  z-index: 900;
+}
+
+.menu-bottom nav li {
+  flex: 1;
+}
+
+.menu-bottom nav li a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em 0;
+  color: var(--light-text-color);
+  transition: var(--trans-color);
+}
+
+.menu-bottom nav li a:hover {
+  color: var(--dark-color);
+}
+
+.menu-bottom nav li a span {
+  font-size: var(--font-smaller);
+}
+
+.menu-bottom nav li a svg {
+  font-size: 1.25em;
+}
+
+.menu-bottom .fly-item {
+  right: 50%;
+  width: 16px;
+  border-radius: var(--percent50);
+  margin-right: -20px;
+  background-color: var(--secondary-dark-color);
+}
 /* 06. BOTTOM MENU___________
     a. Seach
   * ----------------*/
 
+  .search-bottom {
+    position: fixed;
+    bottom: 60px;
+    width: var(--percent100);
+    padding: 2.5em;
+    background-color: var(--secondary-dark-color);
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    will-change: visibility opacity;
+  }
+
+  .showsearch .search-bottom {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .search-bottom .t-close {
+    position: absolute;
+    top: -54px;
+    right: 0;
+  }
+
+  .search-bottom .t-close:hover {
+    background-color: var(--primary-color);
+  }
+
 /* ___________
   07. OVERLAY
   * ----------*/
+
+  .overlay {
+    position: fixed;
+    width: var(--percent100);
+    height: var(--percent100);
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, .5);
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .showmenu .overlay {
+    visibility: visible;
+    opacity: 1;
+  }
 
 /* ___________
   08. PAGE SINGLE

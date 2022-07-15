@@ -52,3 +52,18 @@ const swiper = new Swiper(".swiper", {
     delay: 5000,
   },
 });
+
+
+// show search on mobile
+
+const searchBtn = document.querySelector(".t-search"),
+  tClose = document.querySelector(".search-close"),
+  showClass = document.querySelector('.site')
+
+  searchBtn.addEventListener("click",()=>{
+    showClass.classList.toggle("showsearch")
+  })
+
+  tClose.addEventListener("click", ()=> {
+    showClass.classList.remove("showsearch")
+  })
