@@ -1313,6 +1313,10 @@ p strong {
   08. PAGE SINGLE
   * ----------*/
 
+  .page-home .dpt-cat .dpt-trigger {
+    display: none;
+  }
+
 /* 08. PAGE SINGLE___________
     a. Breadcrumb
   * ----------------*/
