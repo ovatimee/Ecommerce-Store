@@ -53,17 +53,49 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-
 // show search on mobile
 
 const searchBtn = document.querySelector(".t-search"),
   tClose = document.querySelector(".search-close"),
-  showClass = document.querySelector('.site')
+  showClass = document.querySelector(".site");
 
-  searchBtn.addEventListener("click",()=>{
-    showClass.classList.toggle("showsearch")
-  })
+searchBtn.addEventListener("click", () => {
+  showClass.classList.toggle("showsearch");
+});
 
-  tClose.addEventListener("click", ()=> {
-    showClass.classList.remove("showsearch")
-  })
+tClose.addEventListener("click", () => {
+  showClass.classList.remove("showsearch");
+});
+
+// show dpt menu
+
+const dptButton = document.querySelector(".dpt-cat .dpt-trigger"),
+  dptClass = document.querySelector(".site");
+  dptButton.addEventListener("click", () => {
+  dptClass.classList.toggle("showdpt");
+});
+
+const productThumb = new Swiper(".small-image", {
+  loop: true,
+  spaceBetween: 10,
+  slidesPerview: 5,
+  freeMode: true,
+  watchSlidesProgress: true,
+  breakpoints: {
+    481: {
+      spaceBetween: 32,
+    },
+  }
+});
+
+const productBig = new Swiper(".big-image", {
+  loop: true,
+  autoHeight: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  thumbs: {
+    swiper: productThumb,
+  }
+})
