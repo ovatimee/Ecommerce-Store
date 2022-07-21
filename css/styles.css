@@ -1093,7 +1093,7 @@ form.search button:hover {
   background-color: var(--border-color);
 }
 
-.banner :where(.text-content, .over-link){
+.banner :where(.text-content, .over-link) {
   position: absolute;
   top: 0;
   left: 0;
@@ -1140,24 +1140,24 @@ form.search button:hover {
     a. News Letter 
   * ----------------*/
 
-  .newsletter {
-    padding: 2.5em 0;
-    background-color: var(--dark-color);
-    color: var(--white-color);
-  }
-
-  .newsletter h3 {
-    font-size: 1.5em;
-  }
-  
-  .newsletter p {
-    font-weight: var(--fw3);
-    color: var(--border-color);
-    margin: 0.5em 0 1.5em;
-  }
-p strong {
-  color: var(--primary-color);
+.newsletter {
+  padding: 2.5em 0;
+  background-color: var(--dark-color);
+  color: var(--white-color);
 }
+
+.newsletter h3 {
+  font-size: 1.5em;
+}
+
+.newsletter p {
+  font-weight: var(--fw3);
+  color: var(--border-color);
+  margin: 0.5em 0 1.5em;
+}
+/* p strong {
+  color: var(--primary-color);
+} */
 
 .newsletter form {
   max-width: 500px;
@@ -1167,49 +1167,48 @@ p strong {
     b. Widgets
   * ----------------*/
 
-  .wigdets {
-    padding: 3.5em 2.5em;
-    background-color: var(--light-bg-color);
-  }
-
+.wigdets {
+  padding: 3.5em 2.5em;
+  background-color: var(--light-bg-color);
+}
 
 /* 05. FOOTER___________
     c. Footer Info
   * ----------------*/
 
-  .footer-info {
-    padding: 3.5em 0.5em
-  }
+.footer-info {
+  padding: 3.5em 0.5em;
+}
 
-  .footer-info .wrapper .flexcol {
-    align-items: center;
-    gap: 0;
-  }
+.footer-info .wrapper .flexcol {
+  align-items: center;
+  gap: 0;
+}
 
-  .footer-info ul li a {
-    font-size: 1.25em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background-color: var(--light-bg-color);
-    border-radius: var(--percent50);
-    margin: 0.25em;
-    transition: var(--trans-background);
-  }
-  .footer-info ul li a:hover {
-    background-color: var(--border-color);
-  }
+.footer-info ul li a {
+  font-size: 1.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--light-bg-color);
+  border-radius: var(--percent50);
+  margin: 0.25em;
+  transition: var(--trans-background);
+}
+.footer-info ul li a:hover {
+  background-color: var(--border-color);
+}
 
-  .footer-info .logo a {
-    margin: 0 0 1em -0.75em;
-  }
+.footer-info .logo a {
+  margin: 0 0 1em -0.75em;
+}
 
-  .footer-info .mini-text {
-    margin-top: 2em;
-    text-align: center;
-  }
+.footer-info .mini-text {
+  margin-top: 2em;
+  text-align: center;
+}
 /* ___________
   06. BOTTOM MENU
   * ----------*/
@@ -1262,689 +1261,678 @@ p strong {
     a. Seach
   * ----------------*/
 
-  .search-bottom {
-    position: fixed;
-    bottom: 60px;
-    width: var(--percent100);
-    padding: 2.5em;
-    background-color: var(--secondary-dark-color);
-    z-index: 1000;
-    visibility: hidden;
-    opacity: 0;
-    will-change: visibility, opacity;
-  }
+.search-bottom {
+  position: fixed;
+  bottom: 60px;
+  width: var(--percent100);
+  padding: 2.5em;
+  background-color: var(--secondary-dark-color);
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  will-change: visibility, opacity;
+}
 
-  .showsearch .search-bottom {
-    visibility: visible;
-    opacity: 1;
-  }
+.showsearch .search-bottom {
+  visibility: visible;
+  opacity: 1;
+}
 
-  .search-bottom .t-close {
-    position: absolute;
-    top: -54px;
-    right: 0;
-  }
+.search-bottom .t-close {
+  position: absolute;
+  top: -54px;
+  right: 0;
+}
 
-  .search-bottom .t-close:hover {
-    background-color: var(--primary-color);
-  }
+.search-bottom .t-close:hover {
+  background-color: var(--primary-color);
+}
 
 /* ___________
   07. OVERLAY
   * ----------*/
 
-  .overlay {
-    position: fixed;
-    width: var(--percent100);
-    height: var(--percent100);
-    top: 0;
-    left: 0;
-    z-index: 999;
-    background-color: rgba(0, 0, 0, .5);
-    visibility: hidden;
-    opacity: 0;
-  }
+.overlay {
+  position: fixed;
+  width: var(--percent100);
+  height: var(--percent100);
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+}
 
-  .showmenu .overlay {
-    visibility: visible;
-    opacity: 1;
-  }
+.showmenu .overlay {
+  visibility: visible;
+  opacity: 1;
+}
 
 /* ___________
   08. PAGE SINGLE
   * ----------*/
 
-  .page-home .dpt-cat .dpt-trigger,
-  .dpt-trigger .dpt-line-close,
-  .showdpt .dpt-trigger .dpt-open {
-    display: none;
-  }
+.page-home .dpt-cat .dpt-trigger,
+.dpt-trigger .dpt-line-close,
+.showdpt .dpt-trigger .dpt-open {
+  display: none;
+}
 
-  .showdpt .dpt-trigger .dpt-line-close {
-    display: block;
-  }
-
+.showdpt .dpt-trigger .dpt-line-close {
+  display: block;
+}
 
 /* 08. PAGE SINGLE___________
     a. Breadcrumb
   * ----------------*/
 
-  .breadcrumb {
-    font-size: var(--font-small);
-    /* margin-top: 2em; */
-    margin-bottom: 2em;
-  }
+.breadcrumb {
+  font-size: var(--font-small);
+  /* margin-top: 2em; */
+  margin-bottom: 2em;
+}
 
-  .breadcrumb li:not(:last-child)::after {
-    content: "/";
-    padding: 0 0.35em
-  }
+.breadcrumb li:not(:last-child)::after {
+  content: "/";
+  padding: 0 0.35em;
+}
 
-  .breadcrumb li:last-child {
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: var(--light-text-color);
-  }
-
+.breadcrumb li:last-child {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--light-text-color);
+}
 
 /* 08. PAGE SINGLE___________
     b. Product details
   * ----------------*/
 
-  .products.one .item {
-    flex-direction: column;
-  }
+.products.one .item {
+  flex-direction: column;
+}
 
-  .products.one .price .discount {
-    font-size: 1em;
-    font-weight: var(--fw7);
-    line-height: 1;
-    position: absolute;
-    top: 0;
-    bottom: auto;
-    padding: 1em;
-    z-index: 2;
-    background-color: var(--dark-color);
-    color: var(--white-color);
-    border-radius: var(--percent50);
-    margin: 0.5em;
-  }
+.products.one .price .discount {
+  font-size: 1em;
+  font-weight: var(--fw7);
+  line-height: 1;
+  position: absolute;
+  top: 0;
+  bottom: auto;
+  padding: 1em;
+  z-index: 2;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  border-radius: var(--percent50);
+  margin: 0.5em;
+}
 
-  .products.one :where(.big-image, .small-image) {
-    overflow: hidden;
-  }
+.products.one :where(.big-image, .small-image) {
+  overflow: hidden;
+}
 
-  .products.one .big-image {
-    position: relative;
-    margin-bottom: 1em;
-  }
+.products.one .big-image {
+  position: relative;
+  margin-bottom: 1em;
+}
 
-  .products.one :where(.big-image, .small-image) img {
-    object-fit: cover;
-    width: var(--percent100);
-    height: var(--percent100);
-    display: block;
-  }
+.products.one :where(.big-image, .small-image) img {
+  object-fit: cover;
+  width: var(--percent100);
+  height: var(--percent100);
+  display: block;
+}
 
-  .products.one .thumbnail-show {
-    position: relative;
-    width: 130px;
-    height: 110px;
-    overflow: hidden;
-    margin: 0 2em 2em 0;
-  } 
+.products.one .thumbnail-show {
+  position: relative;
+  width: 130px;
+  height: 110px;
+  overflow: hidden;
+  margin: 0 2em 2em 0;
+}
 
-  .products :is(.swiper-button-next, .swiper-button-prev){
-    outline: 0;
-    color: var(--secondary-dark-color);
-    transition: var(--trans-background), transform .3s;
-  }
+.products :is(.swiper-button-next, .swiper-button-prev) {
+  outline: 0;
+  color: var(--secondary-dark-color);
+  transition: var(--trans-background), transform 0.3s;
+}
 
-  .products .big-image:hover .swipper-button-next {
-    transform: translateX(10px);
-  }
+.products .big-image:hover .swipper-button-next {
+  transform: translateX(10px);
+}
 
-
-  .products .big-image:hover .swiper-button-prev {
+.products .big-image:hover .swiper-button-prev {
   transform: translateX(-10px);
-   }
+}
 
-  .products :is(.swiper-button-next, .swiper-button-prev)::after {
+.products :is(.swiper-button-next, .swiper-button-prev)::after {
   font-size: 1.5em;
-  }
+}
 
-  .products .big-image:hover :is(.swiper-button-next, .swiper-button-prev) {
+.products .big-image:hover :is(.swiper-button-next, .swiper-button-prev) {
   background-color: var(--light-bg-color);
-  }
+}
 
 /* 08. PAGE SINGLE___________
     c. Product description
   * ----------------*/
 
-  .products.one .available {
-    font-size: var(--font-small);
-    font-weight: var(--fw5);
-    padding: 0.5em;
-    margin-right: 1em;
-    border-radius: 3px;
-    color: #10ac84;
-    background-color: var(--light-bg-color);
-  }
+.products.one .available {
+  font-size: var(--font-small);
+  font-weight: var(--fw5);
+  padding: 0.5em;
+  margin-right: 1em;
+  border-radius: 3px;
+  color: #10ac84;
+  background-color: var(--light-bg-color);
+}
 
+.products.one .add-review {
+  color: var(--dark-color);
+}
 
-  .products.one .add-review {
-    color: var(--dark-color);
-  }
+.products.one .price {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-  .products.one .price {
-    display: flex;
-    gap: 1em;
-    align-items: center;
-    flex-wrap: wrap;
-  }
+.products.one .price .current {
+  font-size: 1.2em;
+}
 
-  .products.one .price .current {
-    font-size: 1.2em;
-  }
+.products .variant form {
+  display: flex;
+  margin-top: 0.5em;
+}
 
-  .products .variant form {
-    display: flex; 
-    margin-top: 0.5em;
-  }
+.products .variant form p {
+  position: relative;
+  margin: 0 0.5em 0.5em;
+}
 
-  .products .variant form p {
-    position: relative;
-    margin: 0 0.5em 0.5em;
+.products :where(.variant, .actions) .circle {
+  display: block;
+  position: static;
+  top: 0;
+  margin: 0;
+  cursor: pointer;
+  z-index: 1;
+}
 
-  }
+:where(.products .variant, .filter-block:not(.pricing)) input {
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  position: absolute;
+  height: 0;
+  width: 0;
+}
 
-  .products :where(.variant, .actions) .circle {
-    display: block;
-    position: static;
-    top: 0;
-    margin: 0;
-    cursor: pointer;
-    z-index: 1;
-  }
+.products .colors .variant label::before {
+  opacity: 1;
+}
 
-  :where(.products .variant, .filter-block:not(.pricing)) input {
-    clip: rect(0,0,0,0);
-    overflow: hidden;
-    position: absolute;
-    height: 0;
-    width: 0;
-  }
+.products .variant label[for="cogrey"]::before {
+  background-color: #576574;
+}
 
-  .products .variant label::before {
-    opacity: 1;
-  }
+.products .variant label[for="coblue"]::before {
+  background-color: #45a0ff;
+}
 
-  .products .variant label[for="cogrey"]::before {
-    background-color: #576574;
-  }
+.products .variant label[for="cogreen"]::before {
+  background-color: #1dd1a1;
+}
 
-  .products .variant label[for="coblue"]::before {
-    background-color: #45a0ff;
-  }
+.single-product .variant form p input:checked + label {
+  background-color: transparent;
+  border: 2px solid var(--dark-color);
+  color: var(--white-color);
+}
 
-  .products .variant label[for="cogreen"]::before {
-    background-color: #1dd1a1;
-  }
+.products .sizes .variant label::before {
+  background-color: var(--white-color);
+}
 
-  .single-product .variant form p input:checked + label {
-    background-color: transparent;
-    border: 2px solid var(--dark-color);
-    color: var(--white-color);
-  }
+.products .sizes .variant label span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--percent100);
+  height: var(--percent100);
+  font-size: 0.85em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .products .sizes .variant label::before {
-    background-color: var(--white-color);
-  }
+.single-product .sizes .variant form p input:checked + label::before {
+  background-color: var(--dark-color);
+  opacity: 1;
+}
 
-  .products .sizes .variant label span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: var(--percent100);
-    height: var(--percent100);
-    font-size: 0.85em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.products .actions {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
 
-  .single-product .sizes .variant form p input:checked + label::before {
-    background-color: var(--dark-color);
-    opacity: 1;
-  }
+.products .qty-control {
+  width: fit-content;
+  padding: 0.5em;
+  border: 1px solid var(--border-color);
+  margin: 0 2em 2em 0;
+}
 
-  .products .actions {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 2em;
-  }
+.products .actions :where(input, button) {
+  font-size: 1.24em;
+  outline: 0;
+  border: 0;
+}
 
-  .products .qty-control {
-    width: fit-content;
-    padding: 0.5em;
-    border: 1px solid var(--border-color);
-    margin: 0 2em 2em 0;
-  }
+.products .actions input {
+  width: 50px;
+  text-align: center;
+}
 
-  .products .actions :where(input, button) {
-    font-size: 1.24em;
-    outline: 0;
-    border: 0;
-  }
+.products .qty-control button::before {
+  background-color: transparent;
+}
 
-  .products .actions input {
-    width: 50px;
-    text-align: center;
-  }
+.products .actions .button-cart {
+  flex: 1;
+  min-width: 200px;
+}
 
-  .products .qty-control button::before {
-    background-color: transparent;    
-  }
+.products .actions .button-cart button {
+  width: var(--percent100);
+}
 
-  .products .actions .button-cart {
-    flex: 1;
-    min-width: 200px;
-  }
+.wish-share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: var(--fw7);
+  margin: 1em 2em 1em 0;
+  transition: var(--trans-color);
+}
 
-  .products .actions .button-cart button {
-    width: var(--percent100);
-  }
-
-  .wish-share {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    font-weight: var(--fw7);
-    margin: 1em 2em 1em 0;
-    transition: var(--trans-color);
-  }
-
- 
-
-  .wish-share span:first-child svg{
-    width: 50px;
-    height: 15px;
-  }
+.wish-share span:first-child svg {
+  width: 50px;
+  height: 15px;
+}
 
 /* 08. PAGE SINGLE___________
     d. Product Review
   * ----------------*/
 
-  .products .collapse .has-child > a {
-    position: relative;
-    font-weight: var(--fw7);
-    text-transform: uppercase;
-    padding: 1em 1.25em;
-    border-top: 1px solid var(--border-color);
-    display: flex;
-    gap: 1em;
-    align-items: flex-start;
-  }
+.products .collapse .has-child > a {
+  position: relative;
+  font-weight: var(--fw7);
+  text-transform: uppercase;
+  padding: 1em 1.25em;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  gap: 1em;
+  align-items: flex-start;
+}
 
-  .products .collapse .has-child > a::before {
-    content: "+";
-    position: absolute;
-    left: 0;
-  }
+.products .collapse .has-child > a::before {
+  content: "+";
+  position: absolute;
+  left: 0;
+}
 
-  .products .collapse .content {
-    margin: 0 0 1.5em 2em;
-    font-size: var(--font-small);
-  }
+.products .collapse .content {
+  margin: 0 0 1.5em 2em;
+  font-size: var(--font-small);
+}
 
-  .products .collapse .content li span:first-child {
-    min-width: 100px;
-    display: inline-flex;
-    font-weight: var(--fw7);
-    text-transform: uppercase;
-  }
+.products .collapse .content li span:first-child {
+  min-width: 100px;
+  display: inline-flex;
+  font-weight: var(--fw7);
+  text-transform: uppercase;
+}
 
-  .products .collapse table {
-    line-height: 3em;
-  }
+.products .collapse table {
+  line-height: 3em;
+}
 
-  .products .collapse table thead th {
-    vertical-align: bottom;
-    border-bottom: 2px solid var(--dark-color);
-  }
+.products .collapse table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid var(--dark-color);
+}
 
+.products .collapse table :where(th, td) {
+  border-bottom: 1px solid var(--border-color);
+  padding-left: 2em;
+}
 
-  .products .collapse table :where(th, td){
-    border-bottom: 1px solid var(--border-color);
-    padding-left: 2em;
-  }
+.products .collapse .content {
+  display: none;
+}
 
-  .products .collapse .content {
-    display: none;
-  }
+.products .collapse .expand .content {
+  display: flex;
+}
 
-  .products .collapse .expand .content {
-    display: flex;
-  }
+.products .collapse .expand > a::before {
+  content: "-";
+}
 
-  .products .collapse .expand > a::before {
-    content: '-';
-  }
-
-  .products .collapse a span {
-    margin-left: 1em;
-  }
+.products .collapse a span {
+  margin-left: 1em;
+}
 
 /* 08. PAGE SINGLE___________
     e. Product Review
   * ----------------*/
 
-  .products .reviews h4 {
-    font-size: 2em;
-    color: var(--light-text-color);
-    padding-top: 1em;
-    margin: 1em 0 0.5em;
-    border-top: 1px solid var(--border-color);
+.products .reviews h4 {
+  font-size: 2em;
+  color: var(--light-text-color);
+  padding-top: 1em;
+  margin: 1em 0 0.5em;
+  border-top: 1px solid var(--border-color);
+}
 
-  }
+.products .review-block {
+  color: initial;
+}
 
-  .products .review-block {
-    color: initial;
-  }
+.products .review-block-head > a {
+  display: block;
+  font-size: 1.25em;
+  width: var(--percent100);
+  margin-top: 1em;
+  text-align: center;
+}
 
-  .products .review-block-head > a {
-    display: block;
-    font-size: 1.25em;
-    width: var(--percent100);
-    margin-top: 1em;
-    text-align: center;
-  }
+.products .review-block-head .rate-sum {
+  position: relative;
+  font-size: 4em;
+  font-weight: var(--fw7);
+  padding-right: 0.5em;
+}
 
-  .products .review-block-head .rate-sum {
-    position: relative;
-    font-size: 4em;
-    font-weight: var(--fw7);
-    padding-right: 0.5em;
-  }
+.products .review-block-head .rate-sum::before {
+  content: "";
+  width: 2px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 13px;
+  transform: rotate(22deg);
+  background-color: var(--light-text-color);
+}
 
-  .products .review-block-head .rate-sum::before {
-    content: '';
-    width: 2px;
-    height: 50px;
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: 13px;
-    transform: rotate(22deg);
-    background-color: var(--light-text-color);
-  }
+.products .review-block-body .item {
+  gap: 1em;
+  padding-bottom: 2.5em;
+  margin-top: 3.5em;
+}
 
-  .products .review-block-body .item {
-    gap: 1em;
-    padding-bottom: 2.5em;
-    margin-top: 3.5em;
-  }
+.products .review-block-body :where(.person, .review-title) {
+  font-weight: var(--fw7);
+  text-transform: uppercase;
+}
 
-  .products .review-block-body :where(.person, .review-title) {
-    font-weight: var(--fw7);
-    text-transform: uppercase;
-  }
+.products .review-block-body :where(.review-title, .view-all) {
+  font-size: 1.25em;
+  justify-content: end;
+}
 
-  .products .review-block-body :where(.review-title, .view-all) {
-    font-size: 1.25em;
-    justify-content: end;
-  }
+.products .review-block-body .item:not(:last-child) {
+  border-bottom: 1px solid var(--border-color);
+}
 
-  .products .review-block-body .item:not(:last-child) {
-    border-bottom: 1px solid var(--border-color);
-  }
-
-  /* 08. PAGE SINGLE___________
+/* 08. PAGE SINGLE___________
     e. Product Review Form
   * ----------------*/
 
-  .review-form .rating {
-    flex-wrap: wrap;
-  }
+.review-form .rating {
+  flex-wrap: wrap;
+}
 
-  .review-form p {
-    font-size: 1.25em;
-    margin-right: 1em;
-  }
+.review-form p {
+  font-size: 1.25em;
+  margin-right: 1em;
+}
 
-  .review-form .rate-this input {
-    display: none;
-  }
+.review-form .rate-this input {
+  display: none;
+}
 
-  .review-form .rate-this label {
-    float: right;
-    font-size: 2em;
-    color: var(--secondary-dark-color);
-  }
+.review-form .rate-this label {
+  float: right;
+  font-size: 2em;
+  color: var(--secondary-dark-color);
+}
 
-  .rate-this > input:checked ~ label,
-  .rate-this:not(checked) > label:hover,
-  .rate-this:not(checked) > label:hover ~ label {
-    color: #f1c40e;
-  }
+.rate-this > input:checked ~ label,
+.rate-this:not(checked) > label:hover,
+.rate-this:not(checked) > label:hover ~ label {
+  color: #f1c40e;
+}
 
-  .rate-this > input:checked + label:hover,
-  .rate-this > input:checked ~ label:hover,
-  .rate-this > label:hover ~ input:checked ~ label,
-  .rate-this > input:checked ~ label:hover ~ label {
-    color: #ffed85;
-  }
+.rate-this > input:checked + label:hover,
+.rate-this > input:checked ~ label:hover,
+.rate-this > label:hover ~ input:checked ~ label,
+.rate-this > input:checked ~ label:hover ~ label {
+  color: #ffed85;
+}
 
-  .review-form form {
-    margin-top: 2.5em;
-  }
+.review-form form {
+  margin-top: 2.5em;
+}
 
-  .review-form form p {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2em;
-  }
+.review-form form p {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
 
-  .review-form form :where(input, textarea) {
-    line-height: 1;
-    padding: 1em;
-    border: 1px solid var(--border-color);
-    outline: 0;
-  }
+.review-form form :where(input, textarea) {
+  line-height: 1;
+  padding: 1em;
+  border: 1px solid var(--border-color);
+  outline: 0;
+}
 
-  .review-form form label {
-    font-weight: var(--fw5);
-    margin-bottom: 0.5em;
-    text-transform: uppercase;
-  }
+.review-form form label {
+  font-weight: var(--fw5);
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
 /* ___________
   09. PAGE SINGLE: SPECIAL OFFER
   * ----------*/
 
-  .page-single .stock {
-    margin: 2em 0;
-  }
+.page-single .stock {
+  margin: 2em 0;
+}
 
-  .page-single .stock .qty span:last-child {
-    color: initial;
-  }
+.page-single .stock .qty span:last-child {
+  color: initial;
+}
 
-  .single-product .stock .bar {
-    height: 10px;
-  }
+.single-product .stock .bar {
+  height: 10px;
+}
 
-  .page-single .stock .bar .available {
-    margin: 0;
-    border-radius: 0;
-    background-color: var(--secondary-dark-color);
-  } 
+.page-single .stock .bar .available {
+  margin: 0;
+  border-radius: 0;
+  background-color: var(--secondary-dark-color);
+}
 
-  .related-products .content {
-    height: var(--percent100);
-  }
+.related-products .content {
+  height: var(--percent100);
+}
 
-  .related-products .offer {
-    margin: 0;
-  }
+.related-products .offer {
+  margin: 0;
+}
 
-  .related-products .offer p {
-    margin: 0 1em 0 0;
-    text-transform: none;
-  }
+.related-products .offer p {
+  margin: 0 1em 0 0;
+  text-transform: none;
+}
 
-  .related-products .offer ul li {
-    width: 28px;
-    height: 28px;
-    font-size: var(--font-small);
-    padding: 0.5em 0.25em;
-  }
+.related-products .offer ul li {
+  width: 28px;
+  height: 28px;
+  font-size: var(--font-small);
+  padding: 0.5em 0.25em;
+}
 
-  .related-products .content .stock {
-    margin-top: auto;
-  }
+.related-products .content .stock {
+  margin-top: auto;
+}
 
 /* ___________
   10. PAGE CATEGORY
   * ----------*/
 
-  .single-category .holder {
-    display: flex;
-    flex-direction: column;
-  }
+.single-category .holder {
+  display: flex;
+  flex-direction: column;
+}
 
-  .single-category .sidebar,
-  .single-category .section {
-    flex: 1 0 100%;
-  }
+.single-category .sidebar,
+.single-category .section {
+  flex: 1 0 100%;
+}
 
 /* 10. PAGE CATEGORY___________
     a. Sidebar products filter
   * ----------------*/
-  .filter-block {
-    margin-bottom: 1.25em;
-    padding-bottom: 1.25em;
-  }
+.filter-block {
+  margin-bottom: 1.25em;
+  padding-bottom: 1.25em;
+}
 
-  .filter-block:not(:last-child) {
-    border-bottom: 1px solid var(--border-color);
-  }
+.filter-block:not(:last-child) {
+  border-bottom: 1px solid var(--border-color);
+}
 
-  .filter-block li {
-    display: flex;
-    font-size: 0.9em;
-    position: relative;
-    line-height: 2;
-  }
+.filter-block li {
+  display: flex;
+  font-size: 0.9em;
+  position: relative;
+  line-height: 2;
+}
 
-  .filter-block label .checked {
-    width: 16px;
-    height: 16px;
-    position: relative;
-    line-height: 0;
-    display: inline-block;
-    border: 2px solid var(--secondary-dark-color);
-    vertical-align: text-top;
-    margin: 0 7px 0 0;
-    cursor: pointer;
-  }
+.filter-block label .checked {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  line-height: 0;
+  display: inline-block;
+  border: 2px solid var(--secondary-dark-color);
+  vertical-align: text-top;
+  margin: 0 7px 0 0;
+  cursor: pointer;
+}
 
+.filter-block label .checked::before {
+  content: " ";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--secondary-dark-color);
+  top: 2px;
+  left: 2px;
+  opacity: 0;
+}
 
-  .filter-block label .checked::before {
-    content: " ";
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background-color: var(--secondary-dark-color);
-    top: 2px;
-    left: 2px;
-    opacity: 0;
-  }
+.filter-block input:checked + label .checked::before {
+  opacity: 1;
+}
 
-  .filter-block input:checked + label .checked::before {
-    opacity: 1;
-  }
+.filter-block li .count {
+  margin-left: auto;
+  color: var(--light-text-color);
+}
 
-  .filter-block li .count {
-    margin-left: auto;
-    color: var(--light-text-color);
-  }
+.bycolor label[for="cored"]::before {
+  background-color: var(--primary-color);
+}
+.bycolor label[for="colight"]::before {
+  background-color: var(--border-color);
+}
 
-  .bycolor label[for="cored"]::before {
-    background-color: var(--primary-color);
-  }
-  .bycolor label[for="colight"]::before {
-    background-color: var(--border-color);
-  }
+.bycolor input:checked + label {
+  background-color: transparent;
+  border: 2px solid var(--dark-color);
+}
 
-  .bycolor input:checked + label {
-    background-color: transparent;
-    border: 2px solid var(--dark-color);
-  }
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: var(--percent100);
+  background: transparent;
+}
 
-  input[type="range"] {
-    -webkit-appearance: none;
-    appearance: none;
-    width: var(--percent100);
-    background: transparent;
-  }
+input[type="range"] focus {
+  outline: 0;
+}
 
-  input[type="range"] focus {
-    outline: 0;
-  }
+input[type="range"]::-webkit-slider-runnable-track {
+  width: var(--percent100);
+  height: 5px;
+  cursor: pointer;
+  background-color: var(--border-color);
+  box-shadow: none;
+}
+input[type="range"]::-moz-range-track {
+  width: var(--percent100);
+  height: 5px;
+  cursor: pointer;
+  background-color: var(--border-color);
+  box-shadow: none;
+}
 
-  input[type=range]::-webkit-slider-runnable-track {
-    width: var(--percent100);
-    height: 5px;
-    cursor: pointer;
-    background-color: var(--border-color);
-    box-shadow: none;
-  }
-  input[type="range"]::-moz-range-track
-  {
-    width: var(--percent100);
-    height: 5px;
-    cursor: pointer;
-    background-color: var(--border-color);
-    box-shadow: none;
-  }
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 18px;
+  width: 14px;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  margin-top: -7px;
+  position: relative;
+  z-index: 2;
+}
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 18px;
+  width: 14px;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  margin-top: -7px;
+  position: relative;
+  z-index: 2;
+}
 
-  input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    height: 18px;
-    width: 14px;
-    background-color: var(--primary-color);
-    cursor: pointer;
-    margin-top: -7px; 
-    position: relative;
-    z-index: 2;
-  }
-  input[type=range]::-moz-range-thumb {
-    -webkit-appearance: none;
-    height: 18px;
-    width: 14px;
-    background-color: var(--primary-color);
-    cursor: pointer;
-    margin-top: -7px; 
-    position: relative;
-    z-index: 2;
-  }
-
-  .byprice .price-range {
-    display: flex;
-    justify-content: space-between;
-    color: var(--light-text-color);
-    margin-top: 0.5em;
-  }
+.byprice .price-range {
+  display: flex;
+  justify-content: space-between;
+  color: var(--light-text-color);
+  margin-top: 0.5em;
+}
 
 /* 10. PAGE CATEGORY___________
     b. HEAD & Products block
   * ----------------*/
-  .page-title {
-    margin-bottom: 3em;
-  }
+.page-title {
+  margin-bottom: 3em;
+}
 
 .cat-description p {
   font-weight: var(--fw3);
@@ -1980,7 +1968,8 @@ p strong {
   z-index: 10;
 }
 
-.cat-navigation .label, .cat-navigation  ul li{
+.cat-navigation .label,
+.cat-navigation ul li {
   display: flex;
   gap: 0.5em;
   padding: 0.5em 1em;
@@ -2002,11 +1991,9 @@ p strong {
   display: block;
 }
 
-
 .load-more {
   margin: 2em 0 4em;
 }
-
 
 .filter {
   position: fixed;
@@ -2033,71 +2020,275 @@ p strong {
   11. CART
   * ----------*/
 
-  .mini-cart {
-    position: absolute;
-    width: 400px;
-    top: var(--percent100);
-    right: 0;
-    background-color: var(--white-color);
-    z-index: 1000;
-    box-shadow: rgba(0, 0, 0, 0.3) 0 10px 50px;
-  }
+.mini-cart {
+  position: absolute;
+  width: 400px;
+  top: var(--percent100);
+  right: 0;
+  background-color: var(--white-color);
+  z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 10px 50px;
+  visibility: hidden;
+  opacity: 0;
+}
 
-  .mini-cart .products img {
-    transform: none;
-  }
+.iscart:hover .mini-cart {
+  visibility: visible;
+  opacity: 1;
+}
 
-  .mini-cart ul :where(li, .price) {
-    position: relative;
-  }
+:is(.mini-cart .products, .products.cart) .thumbnail img {
+  transform: none;
+}
 
-  .mini-cart .content {
-    width: var(--percent100);
-    height: var(--percent100);
-    touch-action: auto;
-    padding: 1.5em;
-  }
+.mini-cart ul :where(li, .price) {
+  position: relative;
+}
 
-  .mini-cart .cart-head {
-    font-size: 1.5em;
-    font-weight: var(--fw5);
-    color: var(--light-text-color);
-    padding-bottom: 0.5em;
-    margin-bottom: 1em;
-    border-bottom: 1px solid var(--border-color);
-  }
+.mini-cart .content {
+  width: var(--percent100);
+  height: var(--percent100);
+  touch-action: auto;
+  padding: 1.5em;
+}
 
-  .mini-cart .cart-body {
-    padding: 0 1.5em;
-    margin: -1.5em;
-    max-height: 450px;
-    overflow: auto;
-  }
+.mini-cart .cart-head {
+  font-size: 1.5em;
+  font-weight: var(--fw5);
+  color: var(--light-text-color);
+  padding-bottom: 0.5em;
+  /* margin-bottom: 1em; */
+  border-bottom: 1px solid var(--border-color);
+}
 
-  .mini-cart .thumbnail {
-    position: relative;
-    width: 80px;
-    height: 80px;
-    flex-shrink: 0;
-    margin-right: 1em;
-  }
+.mini-cart .cart-body {
+  padding: 0 1.5em;
+  margin: 0 -1.5em;
+  max-height: 450px;
+  overflow: auto;
+}
 
-  .mini-cart .item-content p {
-    font-size: var(--font-small);
-    font-weight: var(--fw5);
-    margin-bottom: 1.2em;
-    line-height: 1.2;
-  }
+:where(.mini-cart, .products.cart) .thumbnail {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  margin-right: 1em;
+}
 
-  .mini-cart .item-remove {
-    margin-left: 1em;
-    flex: 1;
-    justify-content: flex-end;
-  }
+.mini-cart .item-content p {
+  font-size: var(--font-small);
+  font-weight: var(--fw5);
+  margin-bottom: 1.5em;
+  line-height: 1.2;
+}
+
+.mini-cart .item-remove {
+  margin-left: 1em;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.mini-cart .subtotal {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+  margin-bottom: 2em;
+  border-top: 1px solid var(--border-color);
+}
+
+.mini-cart .subtotal p:last-child {
+  font-size: 2em;
+}
+
+.mini-cart .actions a {
+  display: block;
+  width: var(--percent100);
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.mini-cart.show {
+  visibility: visible;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  max-width: 400px;
+  width: 80%;
+}
 
 /* ___________
   12. PAGE CART
   * ----------*/
+
+.products.cart {
+  margin-bottom: 1em;
+}
+
+.products.cart form {
+  width: var(--percent100);
+}
+
+.products.cart table thead th {
+  vertical-align: middle;
+  background-color: var(--light-bg-color);
+}
+
+.products.cart table :where(th, td) {
+  padding: 2em 1em;
+  text-align: center;
+}
+
+.products.cart table :where(th, td):first-child {
+  text-align: left;
+  padding-left: 2em;
+}
+
+.products.cart table tbody td:first-child {
+  padding-left: 0;
+}
+
+.products.cart table td :where(.content, .qty-control, p) {
+  margin: 0;
+  padding: 0;
+}
+
+.products.cart .qty-control :where(button, input) {
+  width: 32px;
+  height: 32px;
+  padding: 0.25em;
+  text-align: center;
+  outline: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.products.cart .qty-control button {
+  cursor: pointer;
+}
+
+.products.cart table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cart-summary {
+  width: var(--percent100);
+  margin: 2.5em 0 4em;
+}
+
+.cart-summary .item {
+  background-color: var(--border-color);
+}
+
+.cart-summary .coupon {
+  position: relative;
+}
+
+.cart-summary .coupon input {
+  font-size: 1.1em;
+  outline: 0;
+  width: var(--percent100);
+  padding: 0 1.5em;
+  line-height: 50px;
+  background-color: var(--white-color);
+  border: 3px solid var(--dark-color);
+}
+
+.cart-summary .coupon button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  outline: 0;
+  font-size: 1em;
+  padding: 0 2.5em;
+  line-height: 56px;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.cart-summary .shipping-rate {
+  padding: 0 2em 0 1em;
+}
+
+.cart-summary .shipping-rate .has-child > a {
+  font-size: 1em;
+  margin: 2em 0;
+  border: 0;
+}
+
+.cart-summary .content form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.styled :where(input, select, textarea) {
+  padding: 0.75em;
+  outline: 0;
+  background-color: var(--white-color);
+  border-width: 0 0 3px 0;
+  border-style: solid;
+  border-color: var(--border-color);
+}
+
+.products .cart-summary .variant form label {
+  position: relative;
+  border: 0;
+  background-color: var(--white-color);
+  transform: scale(0.5) translateX(-25px);
+}
+
+.cart-summary .variant p span {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  line-height: 3;
+}
+
+.cart-summary .variant input:checked + label::before {
+  opacity: 1;
+}
+
+.products.cart .cart-total table tr > * {
+  padding: 0;
+}
+
+.products.cart .cart-total table td {
+  text-align: right;
+}
+
+.products.cart .cart-total {
+  padding: 2em;
+  line-height: 2em;
+  background-color: var(--border-color);
+}
+
+.cart-summary .cart-total table {
+  width: var(--percent100);
+}
+
+.cart-summary .cart-total table tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-summary .grand-total td {
+  font-size: 2em;
+  font-family: "Poppins";
+  font-weight: var(--fw8);
+  line-height: 2em;
+}
+
+.cart-summary .cart-total > a {
+  width: var(--percent100);
+  display: block;
+  text-align: center;
+  margin-top: 2em;
+  font-size: 1.25em;
+}
 
 /* ___________
   13. PAGE CHECKOUT
@@ -2116,17 +2307,46 @@ p strong {
     flex: 0 0 50%;
   }
 
-/*    Page Single   */
-.products.one .big-image {
-  margin-bottom: 2em;
-}
-.products.one .image-show {
-  height: 680px;
+  /*    Page Single   */
+  .products.one .big-image {
+    margin-bottom: 2em;
+  }
+  .products.one .image-show {
+    height: 680px;
+  }
+
+  .products.one .thumbnail-show {
+    height: 160px;
+  }
 }
 
-.products.one .thumbnail-show {
-  height: 160px;
-}
+@media screen and (max-width: 639px) {
+  #cart-table thead {
+    display: none;
+  }
+
+  #cart-table tbody tr {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+  }
+  #cart-table tbody tr td:first-child {
+    width: var(--percent100);
+    min-width: var(--percent100);
+    position: relative;
+  }
+  #cart-table tbody tr td:not(:first-child) {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: var(--percent100);
+  }
+
+  #cart-table tbody tr td:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -2146,7 +2366,8 @@ p strong {
     width: 50%;
   }
 
-  .products.one .is_sticky, .is_sticky {
+  .products.one .is_sticky,
+  .is_sticky {
     position: sticky;
     top: 2em;
   }
@@ -2352,46 +2573,56 @@ p strong {
     align-items: center;
   }
 
-/*  Page Single */
-#page:not(.page-home) .dpt-menu {
-  display: none;
-}
+  /*  Page Single */
+  #page:not(.page-home) .dpt-menu {
+    display: none;
+  }
 
-#page.showdpt .dpt-menu {
-  display: block;
-}
+  #page.showdpt .dpt-menu {
+    display: block;
+  }
 
-.products.one .flexwrap > .row:last-child > .item {
-  padding-left: 2em;
-}
+  .products.one .flexwrap > .row:last-child > .item {
+    padding-left: 2em;
+  }
 
- /* Page Category   */
-.single-category .holder {
-  flex-direction: row;
-}
+  /* Page Category   */
+  .single-category .holder {
+    flex-direction: row;
+  }
 
-.single-category .sidebar {
-  flex: 1 0 25%;
-}
+  .single-category .sidebar {
+    flex: 1 0 25%;
+  }
 
-.single-category .section {
-  flex: 1 0 75%;
-}
+  .single-category .section {
+    flex: 1 0 75%;
+  }
 
-.single-category .sidebar .filter {
-  padding: 0 1.5em 0 0;
-  position: sticky;
-  top: 2em;
-  box-shadow: none;
-  width: var(--percent100);
-  z-index: initial;
-  visibility: visible;
-  opacity: 1;
-}
+  .single-category .sidebar .filter {
+    padding: 0 1.5em 0 0;
+    position: sticky;
+    top: 2em;
+    box-shadow: none;
+    width: var(--percent100);
+    z-index: initial;
+    visibility: visible;
+    opacity: 1;
+  }
 
-.single-category .products.main .item {
-  flex: 0 0 33.3333%;
-}
+  .single-category .products.main .item {
+    flex: 0 0 33.3333%;
+  }
 
-}
+  /* Page Cart */
 
+  .products.cart .form-cart {
+    width: 66%;
+  }
+
+  .products.cart .cart-summary {
+    width: 34%;
+    padding-left: 2.5em;
+    margin-top: 0;
+  }
+}

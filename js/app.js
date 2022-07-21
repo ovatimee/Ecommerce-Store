@@ -110,3 +110,24 @@ for(let i = 0; i < stocks.length; i++) {
     percent = sold*100/stock;
     stocks[i].querySelector('.available').style.width = percent + '%'
 }
+
+
+// show mobile cart
+const divToShow = ".mini-cart"
+const divPopUp = document.querySelector('.mini-cart'),
+  divTrigger = document.querySelector('.cart-trigger')
+
+  divTrigger.addEventListener('click', () => {
+    setTimeout(() => {
+      if(!divPopUp.classList.contains('show')){
+        divPopUp.classList.add('show');
+      }
+    }, 250)
+  })
+
+  document.addEventListener('click', (e)=> {
+    const isClosest = e.target.closest(divToShow)
+    if(!isClosest && divPopUp.classList.contains('show')) {
+      divPopUp.classList.remove('show')
+    }
+  })
