@@ -60,7 +60,7 @@ ul {
 
 img {
   max-width: 100%;
-  vertical-align: center;
+  vertical-align: middle;
 }
 
 strong {
@@ -1270,7 +1270,7 @@ p strong {
     z-index: 1000;
     visibility: hidden;
     opacity: 0;
-    will-change: visibility opacity;
+    will-change: visibility, opacity;
   }
 
   .showsearch .search-bottom {
@@ -1467,7 +1467,7 @@ p strong {
     z-index: 1;
   }
 
-  .products .variant input {
+  :where(.products .variant, .filter-block:not(.pricing)) input {
     clip: rect(0,0,0,0);
     overflow: hidden;
     position: absolute;
@@ -1811,6 +1811,83 @@ p strong {
 /* 10. PAGE CATEGORY___________
     a. Sidebar products filter
   * ----------------*/
+
+  .filter-block {
+    margin-bottom: 1.25em;
+    padding-bottom: 1.25em;
+  }
+
+  .filter-block:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .filter-block li {
+    display: flex;
+    font-size: 0.9em;
+    position: relative;
+    line-height: 2;
+  }
+
+  .filter-block label .checked {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    line-height: 0;
+    display: inline-block;
+    border: 2px solid var(--secondary-dark-color);
+    vertical-align: text-top;
+    margin: 0 7px 0 0;
+    cursor: pointer;
+  }
+
+
+  .filter-block label .checked::before {
+    content: " ";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: var(--secondary-dark-color);
+    top: 2px;
+    left: 2px;
+    opacity: 0;
+  }
+
+  .filter-block input:checked + label .checked::before {
+    opacity: 1;
+  }
+
+  .filter-block li .count {
+    margin-left: auto;
+    color: var(--light-text-color);
+  }
+
+  .bycolor label[for="cored"]::before {
+    background-color: var(--primary-color);
+  }
+  .bycolor label[for="colight"]::before {
+    background-color: var(--border-color);
+  }
+
+  .bycolor input:checked + label {
+    background-color: transparent;
+    border: 2px solid var(--dark-color);
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    width: var(--percent100);
+  }
+
+  input[type="range"] focus {
+    outline: 0;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    width: var(--percent100);
+    height: 5px;
+    cursor: pointer;
+    background-color: var(--border-color);
+  }
 
 /* 10. PAGE CATEGORY___________
     b. Products block
