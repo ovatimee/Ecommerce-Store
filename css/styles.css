@@ -1330,7 +1330,8 @@ p strong {
 
   .breadcrumb {
     font-size: var(--font-small);
-    margin-top: 2em;
+    /* margin-top: 2em; */
+    margin-bottom: 2em;
   }
 
   .breadcrumb li:not(:last-child)::after {
@@ -1808,10 +1809,19 @@ p strong {
   10. PAGE CATEGORY
   * ----------*/
 
+  .single-category .holder {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .single-category .sidebar,
+  .single-category .section {
+    flex: 1 0 100%;
+  }
+
 /* 10. PAGE CATEGORY___________
     a. Sidebar products filter
   * ----------------*/
-
   .filter-block {
     margin-bottom: 1.25em;
     padding-bottom: 1.25em;
@@ -1875,23 +1885,148 @@ p strong {
 
   input[type="range"] {
     -webkit-appearance: none;
+    appearance: none;
     width: var(--percent100);
+    background: transparent;
   }
 
   input[type="range"] focus {
     outline: 0;
   }
 
-  input[type="range"]::-webkit-slider-runnable-track {
+  input[type=range]::-webkit-slider-runnable-track {
     width: var(--percent100);
     height: 5px;
     cursor: pointer;
     background-color: var(--border-color);
+    box-shadow: none;
+  }
+  input[type="range"]::-moz-range-track
+  {
+    width: var(--percent100);
+    height: 5px;
+    cursor: pointer;
+    background-color: var(--border-color);
+    box-shadow: none;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 18px;
+    width: 14px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    margin-top: -7px; 
+    position: relative;
+    z-index: 2;
+  }
+  input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    height: 18px;
+    width: 14px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    margin-top: -7px; 
+    position: relative;
+    z-index: 2;
+  }
+
+  .byprice .price-range {
+    display: flex;
+    justify-content: space-between;
+    color: var(--light-text-color);
+    margin-top: 0.5em;
   }
 
 /* 10. PAGE CATEGORY___________
-    b. Products block
+    b. HEAD & Products block
   * ----------------*/
+  .page-title {
+    margin-bottom: 3em;
+  }
+
+.cat-description p {
+  font-weight: var(--fw3);
+  font-size: 0.9em;
+}
+
+.cat-navigation {
+  font-size: 0.85em;
+  margin: 2em 0;
+  justify-content: flex-end;
+  gap: 1em;
+}
+
+.cat-navigation .item-filter {
+  margin-right: auto;
+}
+
+.cat-navigation > div {
+  position: relative;
+}
+
+.cat-navigation .item-filter a {
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.cat-navigation ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  min-width: var(--percent100);
+  width: max-content;
+  z-index: 10;
+}
+
+.cat-navigation .label, .cat-navigation  ul li{
+  display: flex;
+  gap: 0.5em;
+  padding: 0.5em 1em;
+  transition: var(--trans-color);
+}
+
+:where(.item-sorting, .item-options) .label,
+.cat-navigation ul {
+  color: var(--light-text-color);
+  background-color: var(--light-bg-color);
+  cursor: pointer;
+}
+
+.cat-navigation :where(.label, ul li):hover {
+  color: var(--dark-color);
+}
+
+:where(.item-sorting, .item-options):hover ul {
+  display: block;
+}
+
+
+.load-more {
+  margin: 2em 0 4em;
+}
+
+
+.filter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 2em;
+  max-width: 400px;
+  width: 90%;
+  background-color: var(--white-color);
+  overflow: hidden;
+  z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 10px 50px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.filter.show {
+  visibility: visible;
+  opacity: 1;
+}
 
 /* ___________
   11. CART
@@ -2166,5 +2301,34 @@ p strong {
 .products.one .flexwrap > .row:last-child > .item {
   padding-left: 2em;
 }
+
+ /* Page Category   */
+.single-category .holder {
+  flex-direction: row;
+}
+
+.single-category .sidebar {
+  flex: 1 0 25%;
+}
+
+.single-category .section {
+  flex: 1 0 75%;
+}
+
+.single-category .sidebar .filter {
+  padding: 0 1.5em 0 0;
+  position: sticky;
+  top: 2em;
+  box-shadow: none;
+  width: var(--percent100);
+  z-index: initial;
+  visibility: visible;
+  opacity: 1;
+}
+
+.single-category .products.main .item {
+  flex: 0 0 33.3333%;
+}
+
 }
 
