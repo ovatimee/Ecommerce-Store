@@ -1,7 +1,7 @@
 ## **Pendant-Light-Product-Page**
  
 
-I intentionally build this with Vanilla JS but, 
+This is the frontend for a fully reponsive modern online store
 I'm rebuilding this store with MERN Stack, This repo will be updated soon. For now you can checkout the live site from the link above
 
 
