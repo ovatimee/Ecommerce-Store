@@ -2,7 +2,7 @@
  
 
 This is the frontend for a fully reponsive modern online store
-I'm rebuilding this store with MERN Stack, This repo will be updated soon. For now you can checkout the live site from the link above
+I'm rebuilding this store with PERN Stack(PostgreSQL, EspressJS React and Node) , This repo will be updated soon. For now you can checkout the live site from the link above
 
 
 ### **Here's Some Screenshots of The Project**
