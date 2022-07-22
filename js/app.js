@@ -131,3 +131,49 @@ const divPopUp = document.querySelector('.mini-cart'),
       divPopUp.classList.remove('show')
     }
   })
+
+  // show modal onload
+
+
+  window.onload = () => {
+    document.querySelector('.site').classList.toggle('showmodal')
+  }
+
+  const closeModalBtn = document.querySelector('.modalclose')
+    closeModalBtn.addEventListener('click', ()=> {
+      document.querySelector('.site').classList.remove('showmodal')
+    })
+
+
+    const FtoShow = '.filter';
+    const FpopUp = document.querySelector(FtoShow)
+    const Ftrigger = document.querySelector('.filter-trigger')
+
+    Ftrigger.addEventListener('click', () => {
+      setTimeout(() => {
+        if (!FpopUp.classList.contains('show')) {
+          FpopUp.classList.add('show')
+        }
+      }, 250)
+
+    })
+
+    // close by clicking outside
+
+    document.addEventListener('click', (e) => {
+      const isClosest = e.target.closest(FtoShow)
+      if (!isClosest && FpopUp.classList.contains('show')) {
+        FpopUp.classList.remove('show')
+      }
+    })
+
+
+    // Product On Click To Products Page
+
+    //get product
+
+
+    //add click event 
+
+
+  // change product page info on click
