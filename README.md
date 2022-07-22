@@ -17,6 +17,8 @@ Light Toggled On             |  Light Toggled Off
 <img src="/screenshots/Screen Shot 2022-07-22 at 12.25.32.png" width="600" height="600"/>  |  <img src="/screenshots/Screen Shot 2022-07-22 at 12.25.08.png" width="300" height="600"/>
 
 
+<img src="/screenshots/Screen Shot 2022-07-22 at 12.25.28.png" width="600" height="600"/>  |  <img src="/screenshots/Screen Shot 2022-07-22 at 12.25.46.png" width="300" height="600"/>
+
 ### - Live Site URL: [Pendant-Light](https://pendant-light-product-page.vercel.app/)
 
 ## My process
