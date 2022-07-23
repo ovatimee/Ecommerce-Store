@@ -1,7 +1,7 @@
 ## **Pendant-Light-Product-Page**
  
 
-This is the frontend for a fully reponsive modern online store
+This is the frontend for a fully reponsive modern online store (No Frameworks)
 I'm rebuilding this store with PERN Stack(PostgreSQL, EspressJS React and Node) , This repo will be updated soon. For now you can checkout the live site from the link above
 
 
